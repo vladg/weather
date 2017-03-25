@@ -58,6 +58,14 @@ class MainViewController: UIViewController {
 				self.weatherTemp.text = temp
 				self.weatherHumidity.text = humidity
 				
+				if let icon = icon {
+					self.weatherImage.image = nil;
+					IconLoader.instance.loadIcon(icon) {
+						(image: UIImage?) in
+						self.weatherImage.image = image;
+					}
+				}
+
 				self.contentView.isHidden = false;
 			} else {
 				self.errorView.isHidden = false;
