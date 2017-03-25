@@ -64,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				F5C297D61E86D78300C9BC06 /* simpleweather */,
+				F5F6B4521E86FB4E00F01E35 /* resources */,
 				F5C297EB1E86D78300C9BC06 /* simpleweatherTests */,
 				F5C297D51E86D78300C9BC06 /* Products */,
 			);
@@ -100,6 +101,13 @@
 				F5F6B4501E86D98900F01E35 /* WeatherProviderTest.swift */,
 			);
 			path = simpleweatherTests;
+			sourceTree = "<group>";
+		};
+		F5F6B4521E86FB4E00F01E35 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -25,7 +25,7 @@ class WeatherProvider {
 		let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
 			guard error == nil else {
 				debugPrint(error!);
-				handler(nil)
+				DispatchQueue.main.async { handler(nil) }
 				return;
 			}
 			
@@ -36,14 +36,14 @@ class WeatherProvider {
 					let json = try JSONSerialization.jsonObject(with: jsonData)
 					if(json is NSDictionary) {
 						debugPrint(json)
-						handler(json as? NSDictionary)
+						DispatchQueue.main.async { handler(json as? NSDictionary) }
 					} else {
 						// TODO: should we check if an array is returned and extract first item?
 						// don't care just yet, just return nil
-						handler(nil)
+						DispatchQueue.main.async { handler(nil) }
 					}
 				} catch {
-					handler(nil)
+					DispatchQueue.main.async { handler(nil) }
 				}
 			}
 		}
