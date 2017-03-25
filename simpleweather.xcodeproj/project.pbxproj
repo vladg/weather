@@ -13,6 +13,8 @@
 		F5C297DF1E86D78300C9BC06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C297DE1E86D78300C9BC06 /* Assets.xcassets */; };
 		F5C297E21E86D78300C9BC06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C297E01E86D78300C9BC06 /* LaunchScreen.storyboard */; };
 		F5C297ED1E86D78300C9BC06 /* simpleweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C297EC1E86D78300C9BC06 /* simpleweatherTests.swift */; };
+		F5F6B44F1E86D96900F01E35 /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6B44E1E86D96900F01E35 /* WeatherProvider.swift */; };
+		F5F6B4511E86D98900F01E35 /* WeatherProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6B4501E86D98900F01E35 /* WeatherProviderTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F5C297E81E86D78300C9BC06 /* simpleweatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleweatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C297EC1E86D78300C9BC06 /* simpleweatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleweatherTests.swift; sourceTree = "<group>"; };
 		F5C297EE1E86D78300C9BC06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F6B44E1E86D96900F01E35 /* WeatherProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
+		F5F6B4501E86D98900F01E35 /* WeatherProviderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherProviderTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				F5C297DE1E86D78300C9BC06 /* Assets.xcassets */,
 				F5C297E01E86D78300C9BC06 /* LaunchScreen.storyboard */,
 				F5C297E31E86D78300C9BC06 /* Info.plist */,
+				F5F6B44E1E86D96900F01E35 /* WeatherProvider.swift */,
 			);
 			path = simpleweather;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			children = (
 				F5C297EC1E86D78300C9BC06 /* simpleweatherTests.swift */,
 				F5C297EE1E86D78300C9BC06 /* Info.plist */,
+				F5F6B4501E86D98900F01E35 /* WeatherProviderTest.swift */,
 			);
 			path = simpleweatherTests;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C297DA1E86D78300C9BC06 /* MainViewController.swift in Sources */,
+				F5F6B44F1E86D96900F01E35 /* WeatherProvider.swift in Sources */,
 				F5C297D81E86D78300C9BC06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C297ED1E86D78300C9BC06 /* simpleweatherTests.swift in Sources */,
+				F5F6B4511E86D98900F01E35 /* WeatherProviderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
