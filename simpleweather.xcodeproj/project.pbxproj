@@ -17,6 +17,7 @@
 		F5F6B4511E86D98900F01E35 /* WeatherProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6B4501E86D98900F01E35 /* WeatherProviderTest.swift */; };
 		F5F6B4541E8702F400F01E35 /* failwhale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5F6B4531E8702F400F01E35 /* failwhale.jpg */; };
 		F5F6B4561E8703DA00F01E35 /* IconLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6B4551E8703DA00F01E35 /* IconLoader.swift */; };
+		F5F6B45A1E870B1000F01E35 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F6B4591E870B1000F01E35 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F5F6B4501E86D98900F01E35 /* WeatherProviderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherProviderTest.swift; sourceTree = "<group>"; };
 		F5F6B4531E8702F400F01E35 /* failwhale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = failwhale.jpg; path = simpleweather/resources/failwhale.jpg; sourceTree = "<group>"; };
 		F5F6B4551E8703DA00F01E35 /* IconLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconLoader.swift; sourceTree = "<group>"; };
+		F5F6B4591E870B1000F01E35 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = simpleweather/resources/settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F5F6B4531E8702F400F01E35 /* failwhale.jpg */,
+				F5F6B4591E870B1000F01E35 /* settings.png */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C297E21E86D78300C9BC06 /* LaunchScreen.storyboard in Resources */,
+				F5F6B45A1E870B1000F01E35 /* settings.png in Resources */,
 				F5F6B4541E8702F400F01E35 /* failwhale.jpg in Resources */,
 				F5C297DF1E86D78300C9BC06 /* Assets.xcassets in Resources */,
 				F5C297DD1E86D78300C9BC06 /* Main.storyboard in Resources */,

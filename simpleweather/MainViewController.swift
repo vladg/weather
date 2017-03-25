@@ -31,6 +31,8 @@ class MainViewController: UIViewController {
 		self.location = "Dallas"
 		
 		self.title = self.location
+		let settingsImage = UIImage(named: "settings.png")
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsImage, style: .plain, target: self, action: #selector(didPressSettings))
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -78,6 +80,9 @@ class MainViewController: UIViewController {
 		}
 	}
 
+	@IBAction func didPressSettings() {
+		
+	}
 
 }
 
