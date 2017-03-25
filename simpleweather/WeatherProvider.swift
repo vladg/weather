@@ -36,10 +36,15 @@ class WeatherProvider {
 					let json = try JSONSerialization.jsonObject(with: jsonData)
 					if(json is NSDictionary) {
 						debugPrint(json)
-						DispatchQueue.main.async { handler(json as? NSDictionary) }
+						let code = (json as! NSDictionary)["cod"] as? Int
+						if (code != nil && code == 200) {
+							DispatchQueue.main.async { handler(json as? NSDictionary) }
+						} else {
+							DispatchQueue.main.async { handler(nil) }
+						}
 					} else {
-						// TODO: should we check if an array is returned and extract first item?
-						// don't care just yet, just return nil
+						// in theory this we probably should also check for JSON array
+						// but for this sample project we don't care about that
 						DispatchQueue.main.async { handler(nil) }
 					}
 				} catch {

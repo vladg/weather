@@ -42,4 +42,15 @@ class WeatherProviderTest: XCTestCase {
 		}
 		waitForExpectations(timeout: 2, handler: nil)
 	}
+
+	func testNotFound() {
+		let noWeatherData = expectation(description: "No weather data for this location")
+		WeatherProvider.instance.fetchWeatherForLocation("askldjfanildjfgqkv") {
+			(json: NSDictionary?)  in
+			if(json == nil) {
+				noWeatherData.fulfill()
+			}
+		}
+		waitForExpectations(timeout: 2, handler: nil)
+	}
 }

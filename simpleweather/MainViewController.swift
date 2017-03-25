@@ -55,6 +55,7 @@ class MainViewController: UIViewController, LocationProviderDelegate {
 		self.busyView.isHidden = false;
 		self.errorView.isHidden = true;
 		self.contentView.isHidden = true;
+		self.weatherImage.image = nil;
 		
 		WeatherProvider.instance.fetchWeatherForLocation(self.location) {
 			(json: NSDictionary?) in
