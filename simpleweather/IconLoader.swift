@@ -8,6 +8,11 @@
 
 import UIKit
 
+// this a super simple image loader
+// in a production app we'd need to add error handling,
+// possible add a default image we can return when loading from a ULR fails
+// also, in production app we'd probably add some kind of caching strategy
+
 class IconLoader {
 	static var instance = IconLoader()
 	static let BASE_URL = "http://openweathermap.org/img/w/"

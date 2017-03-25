@@ -86,6 +86,14 @@ class MainViewController: UIViewController, LocationProviderDelegate {
 	}
 
 	@IBAction func didPressSettings() {
+		
+		// this fulfills the requirement but from the UX perspective it's really bad
+		// in a production app this would probably be a more complex modal
+		// we can store last N user inputs and display them in a table view next to the text field
+		// we can add a list of known cities to the app and implement auto-completion
+		// we can also make location more flexible and allow zip codes and latitude/logitude
+		// we can query user's GPS location and use that for default location
+		
 		let alert: UIAlertController = UIAlertController(title: "Enter city", message: "", preferredStyle: .alert)
 		
 		let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)

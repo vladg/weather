@@ -13,7 +13,7 @@ class WeatherProvider {
 	static let API_KEY = "00d6a04371eea33bc61269fbd760ee1e"
 	static let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
 	
-	// HTTP or JSON deserialization error will be meaningfull to the end user
+	// HTTP or JSON deserialization error will not be meaningfull to the end user
 	// therefore this method will discard all errors and simply call handler with nil
 	// also, for this sample project we will not model out weather as a class nor
     // will we do any validation on the received weather info
