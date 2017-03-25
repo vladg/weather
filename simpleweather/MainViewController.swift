@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, LocationProviderDelegate {
 	
 	@IBOutlet var busyView: UIView!
 	@IBOutlet var errorView: UIView!
@@ -19,7 +19,11 @@ class MainViewController: UIViewController {
 	@IBOutlet var weatherTemp: UILabel!
 	@IBOutlet var weatherHumidity: UILabel!
 	
-	var location: String!
+	var location: String! {
+		didSet {
+			self.title = self.location
+		}
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,7 +32,8 @@ class MainViewController: UIViewController {
 		self.errorView.isHidden = true;
 		self.contentView.isHidden = true;
 		
-		self.location = "Dallas"
+		self.location = LocationProvider.instance.currentLocation
+		LocationProvider.instance.delegate = self
 		
 		self.title = self.location
 		let settingsImage = UIImage(named: "settings.png")
@@ -81,7 +86,30 @@ class MainViewController: UIViewController {
 	}
 
 	@IBAction func didPressSettings() {
+		let alert: UIAlertController = UIAlertController(title: "Enter city", message: "", preferredStyle: .alert)
 		
+		let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
+		let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default) { action -> Void in
+			let text = (alert.textFields!.first! as UITextField).text
+			if let text = text {
+				if(text.characters.count > 0) {
+					LocationProvider.instance.currentLocation = text;
+				}
+				
+			}
+		}
+
+		alert.addAction(cancelAction)
+		alert.addAction(okAction)
+		alert.addTextField() { (textField) -> Void in
+		}
+
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	func locationDidChange() {
+		self.location = LocationProvider.instance.currentLocation
+		self.reload();
 	}
 
 }
