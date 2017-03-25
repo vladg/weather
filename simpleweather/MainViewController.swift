@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
 	@IBOutlet var weatherTemp: UILabel!
 	@IBOutlet var weatherHumidity: UILabel!
 	
+	var location: String!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,6 +27,10 @@ class MainViewController: UIViewController {
 		self.busyView.isHidden = false;
 		self.errorView.isHidden = true;
 		self.contentView.isHidden = true;
+		
+		self.location = "Dallas"
+		
+		self.title = self.location
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -44,7 +49,7 @@ class MainViewController: UIViewController {
 		self.errorView.isHidden = true;
 		self.contentView.isHidden = true;
 		
-		WeatherProvider.instance.fetchWeatherForLocation("Dallas") {
+		WeatherProvider.instance.fetchWeatherForLocation(self.location) {
 			(json: NSDictionary?) in
 			
 			self.busyView.isHidden = true;
