@@ -20,7 +20,12 @@ class WeatherProvider {
 	// simply return weather information as NSDictionary
 	
 	func fetchWeatherForLocation(_ location: String, handler: @escaping (NSDictionary?) -> Void) {
-		let urlString = WeatherProvider.BASE_URL + "APPID=\(WeatherProvider.API_KEY)" + "&" + "q=\(location)"
+		let escapedLocation = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+		guard escapedLocation != nil else {
+			DispatchQueue.main.async { handler(nil) }
+			return;
+		}
+		let urlString = WeatherProvider.BASE_URL + "APPID=\(WeatherProvider.API_KEY)" + "&" + "q=\(escapedLocation!)"
 		let url = URL(string: urlString)
 		let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
 			guard error == nil else {
